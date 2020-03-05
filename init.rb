@@ -12,6 +12,7 @@ class WebServer
     ['INT', 'TERM'].each {|signal|
       Signal.trap(signal){ @server.shutdown }
     }
+    @data_store = WEBrick::Cookie.new("values", "")
   end
 
   def set_html(url, file_path)

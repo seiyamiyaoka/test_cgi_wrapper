@@ -1,4 +1,5 @@
 require_relative 'init.rb'
+$input_values = []
 
 server = WebServer.new
 server.set_html('/test', 'test.html.erb')
